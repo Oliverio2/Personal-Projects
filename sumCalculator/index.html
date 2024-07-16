@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Calculator</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      placeholder="Write a number"
+      required
+      class="num1"
+      id="num1"
+    />
+    <input
+      type="number"
+      placeholder="Write a number"
+      required
+      class="num2"
+      id="num2"
+    />
+    <input
+      type="number"
+      placeholder="Result"
+      disabled
+      required
+      class="result"
+      id="result"
+    />
+    <button type="button" onclick="sum()">Submit</button>
+
+    <script>
+      function sum() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        const result = num1 + num2;
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
